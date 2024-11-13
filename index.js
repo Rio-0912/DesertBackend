@@ -3,6 +3,7 @@ const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
 const ProductRouter = require('./Routes/ProductRouter');
+const UserRouter = require('./Routes/UserRouter.js');
 
 app.use(cors());
 
@@ -12,8 +13,10 @@ const db = mysql.createConnection({
     password: "root",
     database: "ecommerce"
 });
+app.use(express.json());
 
 app.use('/api/products', ProductRouter);
+app.use('/api/users', UserRouter);
 
 app.get('/', (req, res) => {
     return res.json("Welcome to the API");
