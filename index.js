@@ -4,6 +4,7 @@ const cors = require("cors");
 const app = express();
 const ProductRouter = require('./Routes/ProductRouter');
 const UserRouter = require('./Routes/UserRouter.js');
+const CartRoute = require('./Routes/CartRoute.js');
 
 app.use(cors());
 
@@ -15,6 +16,7 @@ const db = mysql.createConnection({
 });
 app.use(express.json());
 
+app.use('/api/cart', CartRoute);
 app.use('/api/products', ProductRouter);
 app.use('/api/users', UserRouter);
 
