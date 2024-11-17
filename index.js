@@ -5,6 +5,7 @@ const app = express();
 const ProductRouter = require('./Routes/ProductRouter');
 const UserRouter = require('./Routes/UserRouter.js');
 const CartRoute = require('./Routes/CartRoute.js');
+const OrderRoute = require('./Routes/OrderRoute.js');
 
 app.use(cors());
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/api/cart', CartRoute);
 app.use('/api/products', ProductRouter);
 app.use('/api/users', UserRouter);
+app.use('/api/orders', OrderRoute)
 
 app.get('/', (req, res) => {
     return res.json("Welcome to the API");
