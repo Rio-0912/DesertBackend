@@ -6,6 +6,7 @@ const ProductRouter = require('./Routes/ProductRouter');
 const UserRouter = require('./Routes/UserRouter.js');
 const CartRoute = require('./Routes/CartRoute.js');
 const OrderRoute = require('./Routes/OrderRoute.js');
+const ReviewRoute = require('./Routes/ReviewRoute.js');
 
 app.use(cors());
 
@@ -21,6 +22,7 @@ app.use('/api/cart', CartRoute);
 app.use('/api/products', ProductRouter);
 app.use('/api/users', UserRouter);
 app.use('/api/orders', OrderRoute)
+app.use('/api/reviews', ReviewRoute)
 
 app.get('/', (req, res) => {
     return res.json("Welcome to the API");
