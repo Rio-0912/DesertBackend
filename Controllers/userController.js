@@ -8,7 +8,6 @@ const db = mysql.createConnection({
 });
 
 const showUserDetailsToUser = (req, res) => {
-    console.log("toi");
 
     const {id}  = req.headers;
     console.log(id);
