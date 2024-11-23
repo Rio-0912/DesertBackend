@@ -11,10 +11,10 @@ const ReviewRoute = require('./Routes/ReviewRoute.js');
 app.use(cors());
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "root",
-    database: "ecommerce"
+    user: "sql12746847",
+    host: "sql12.freesqldatabase.com",
+    password: "KDMgXd72TQ",
+    database: "sql12746847"
 });
 app.use(express.json());
 

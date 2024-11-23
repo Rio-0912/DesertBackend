@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "root",
-    database: "ecommerce"
+    user: "sql12746847",
+    host: "sql12.freesqldatabase.com",
+    password: "KDMgXd72TQ",
+    database: "sql12746847"
 });
 
 // Function to create an order and transfer cart items to order items
